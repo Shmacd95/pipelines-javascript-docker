@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: shmacdpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: shmacdpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: shmacdpipelinesjavascriptdocker 
+          image: shanemacdev.azurecr.io/shmacdpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
